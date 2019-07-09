@@ -13,5 +13,5 @@ for your Discord bot.
 
 ### Installation
 
-**Node.js 10.0.0 (with NPM) or newer and discord.js 11.5.1 or newer is required**
+**Node.js 10.0.0 or newer and discord.js 11.5.1 or newer is required**
 - ```npm install discord-router/discord-router```
