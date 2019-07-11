@@ -25,7 +25,7 @@ If you're experiencing problems, don't understand the documentation, want to pro
 - [Official Discord channels for discord-router](https://discord.gg/GCwftp)
 - [Github issues for discord-router](https://github.com/byShoto/Discord-router/issues)
 
-## Legals
+## Terms
    Copyright 2019 COMPANY
 
    Licensed under the Apache License, Version 2.0 (the "License");
