@@ -21,7 +21,7 @@
 
 ## Community, help & feedback
 If you're experiencing problems, don't understand the documentation, want to provide feedback or just talk with the community, theses links will be helpful :
-- [Official documentation](http://#)
+- [Official documentation for discord-router](http://#)
 - [Official Discord channels for discord-router](https://discord.gg/GCwftp)
 - [Github issues for discord-router](https://github.com/byShoto/Discord-router/issues)
 
