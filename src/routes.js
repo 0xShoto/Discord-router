@@ -26,6 +26,11 @@ const route = [
         "name": "steve",
         "path": "Page perso Steve",
         "template": require('./templates/steve')
+    },
+    {
+        "name": "fanta",
+        "path": "Fanta",
+        "template": require('./templates/fanta')
     }
 ]
 
