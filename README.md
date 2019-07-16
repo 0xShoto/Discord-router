@@ -3,7 +3,7 @@
 
 ## About
 
-```discord-router``` is a Node.js module for discord.js that allows you to easly create dynamic interfaces with embeds for your Discord bot.
+```discord-router``` is a Node.js module for discord.js that allows you to easly create dynamic and stunning interfaces with embeds for your Discord bot.
 - Object-oriented
 - Lightweight
 - Well documented
