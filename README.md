@@ -78,7 +78,7 @@ Now, we will create a second template for the ``pong`` route.
 
 ### Result
 Let's have a fun ping-pong game with your new buddy !<br>
-![Ping-Pong](https://i.gyazo.com/6878326e56d256ae59dcee8a9010fb6f.gif)
+![Ping-Pong](https://gyazo.com/915c7e881d15737612714f5fb0a3bdb5)
 
 ## Community, help & feedback
 If you're experiencing problems, don't understand something, want to provide feedback or just talk with the community, theses links will be helpful :
