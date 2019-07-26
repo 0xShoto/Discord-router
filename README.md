@@ -4,10 +4,9 @@
 ## About
 
 ```discord-router``` is a Node.js module for discord.js that allows you to easly create dynamic and stunning interfaces with embeds for your Discord bot.
-- Object-oriented
 - Lightweight
-- Well documented
 - Easy to use
+- CLI
 
 ## Get started
 
@@ -18,9 +17,71 @@
 **Node.js 10.0.0 or newer and discord.js 11.5.1 or newer is required**
       
     npm install discord-router
+    
+### Example
+Assuming that you already made your index file, lets start !
+```node
+const Discord = require('discord.js')
+const Router = require('discord-router')
+const client = new Discord.Client()
+
+Router.setRoutes(require('./routes'))
+Router.setClient(client)
+
+client.on('message', message => {
+    if (message.author.bot) return
+
+    if (message.content === "init") {
+        Router.send('ping', message.author, message.channel)
+    }
+})
+
+client.on('ready', () => {
+    console.log('Ready to guide them embeds !')
+})
+
+client.login('PRIVATE_DISCORD_TOKEN')
+```
+
+Now, create a file named ``routes.js``, it will contains settings for your different routes.
+For each route, define a ``name``, a ``path`` and the location to your ``template``.
+```node
+module.exports = [
+    {
+        name: "ping",
+        path: "Path of ping",
+        template: require('./templates/ping.js')
+    },
+    {
+        name: "pong",
+        path: "Path of pong",
+        template: require('./templates/pong.js')
+    }
+]
+```
+
+And now, create your templates in a directory called ``templates``.
+Each templates needs a ``content`` and one or multiple ``actions`` with an ``emoji`` and a route name to navigate ``to``.
+```node
+module.exports = {
+    content: "It's a pong!",
+    actions: [
+        {
+            emoji: "🏓",
+            to: "ping"
+        }
+    ]
+}
+```
+
+Now, we will create a second template for the ``pong`` route.
+
+### Result
+Let's have a fun ping-pong game with your new buddy ! \s\s
+[Ping-Pong](https://i.gyazo.com/6878326e56d256ae59dcee8a9010fb6f.gif)
 
 ## Community, help & feedback
-If you're experiencing problems, don't understand the documentation, want to provide feedback or just talk with the community, theses links will be helpful :
+If you're experiencing problems, don't understand something, want to provide feedback or just talk with the community, theses links will be helpful :
 - [Official documentation for discord-router](http://#)
 - [Official Discord channels for discord-router](https://discord.gg/GCwftp)
 - [Github issues for discord-router](https://github.com/byShoto/Discord-router/issues)
