@@ -82,8 +82,8 @@ Let's have a fun ping-pong game with your new buddy !<br>
 
 ## Community, help & feedback
 If you're experiencing problems, don't understand something, want to provide feedback or just talk with the community, theses links will be helpful :
-- <a href="https://discord.gg/mQVVMc9" target="_blank">Official Discord channels for discord-router</a>
-- <a href="https://github.com/byShoto/Discord-router/issues" target="_blank">Github issues for discord-router</a>
+- [Official Discord channels for discord-router](https://discord.gg/mQVVMc9){:target="_blank"}
+- [Github issues for discord-router](https://github.com/byShoto/Discord-router/issues){:target="_blank"}
 
 ## Terms
    Copyright 2019 COMPANY
