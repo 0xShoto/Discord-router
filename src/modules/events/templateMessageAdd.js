@@ -8,15 +8,18 @@ module.exports = client => {
         if (!lastBotMessage || lastBotMessage.author.id !== message.client.user.id) return
 
         let Router = require('../../../index'),
-            reqRoute = Router.routes.find(r => r.path === lastBotMessage.embeds[0].footer.text)
+            reqRoute = await require('../methods/path/findPath')(Router.routes, lastBotMessage.embeds[0].footer.text)
         
+        if (!reqRoute) return;
+
         if (reqRoute.template.post) {
             const   res = await Router.routes.find(r => r.name === reqRoute.template.post.to),
                     body = await Object.assign(reqRoute.template.post ? reqRoute.template.post.body || {} : {}, {
                 "userMessage": message.content,
                 "user": message.author,
                 "channel": message.channel,
-                "lastContent": lastBotMessage.embeds[0]
+                "lastContent": lastBotMessage.embeds[0],
+                "lastRoute": reqRoute
             })
 
             if (lastBotMessage.deletable && !reqRoute.keep) lastBotMessage.delete()

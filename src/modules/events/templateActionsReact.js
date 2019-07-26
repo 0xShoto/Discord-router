@@ -14,6 +14,8 @@ module.exports = async (message, route) => {
                     || emojiName
         }
 
-        await message.react(emoji)
+        try {
+            await message.react(emoji)
+        } catch (e) {}
     }
 }
