@@ -64,11 +64,11 @@ And now, create your templates in a directory called ``templates``.
 Each templates needs a ``content`` and one or multiple ``actions`` with an ``emoji`` and a route name to navigate ``to``.
 ```node
 module.exports = {
-    content: "It's a pong!",
+    content: "It's a ping!",
     actions: [
         {
             emoji: "🏓",
-            to: "ping"
+            to: "pong"
         }
     ]
 }
