@@ -77,7 +77,7 @@ module.exports = {
 Now, we will create a second template for the ``pong`` route.
 
 ### Result
-Let's have a fun ping-pong game with your new buddy !\s\s
+Let's have a fun ping-pong game with your new buddy !<br>
 ![Ping-Pong](https://i.gyazo.com/6878326e56d256ae59dcee8a9010fb6f.gif)
 
 ## Community, help & feedback
