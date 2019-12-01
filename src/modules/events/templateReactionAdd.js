@@ -10,12 +10,12 @@ module.exports = client => {
             emoji = info.d.emoji
         if (user.bot || message.author.id !== client.user.id) return
 
-        const   Router = require('@yugeo/discord-router'),
+        const   Router = require('../../../index'),
                 reqRoute = await require('../methods/path/findPath')(Router.routes, message.embeds[0].footer.text)
 
         if (!reqRoute) throw new RangeError('This route doesn\'t exist')
 
-        const   reqAction = await reqRoute.template.actions.find(a => a.emoji === emoji.name)
+        const   reqAction = await reqRoute.template.actions.find(a => a.emoji === emoji.name || a.emoji.indexOf(emoji.name) >= 0)
                 res = await Router.routes.find(r => r.name === reqAction.to)
 
         if (!res) throw new RangeError('This route doesn\'t exist');

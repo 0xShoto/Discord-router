@@ -1,11 +1,11 @@
-const   templateActionsReact = require('@yugeo/discord-router/src/modules/events/templateActionsReact'),
-        templateSetPath = require('@yugeo/discord-router/src/modules/events/templateSetPath')
+const   templateActionsReact = require('../events/templateActionsReact'),
+        templateSetPath = require('../events/templateSetPath')
 
 module.exports = async (route, user, channel) => {
 
     // Set the Path
     route = await templateSetPath(route, route.template.keys || {})
-    
+
     var message = {}
     if (!route.type || channel.type === route.type) {
         message = await channel.send(route.template.content)  
